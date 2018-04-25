@@ -1,0 +1,59 @@
+Arguments: 
+  /home/flash/.nvm/versions/node/v8.7.0/bin/node /usr/share/yarn/bin/yarn.js start --prefix client
+
+PATH: 
+  /home/flash/.nvm/versions/node/v8.7.0/lib/node_modules/npm/bin/node-gyp-bin:/home/flash/development/express-react-boilerplate/node_modules/.bin:/home/flash/.nvm/versions/node/v8.7.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.7.0
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "express-react-boilerplate",
+    "version": "1.0.0",
+    "description": "boilerplate for react and express",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js",
+      "client": "yarn start --prefix client",
+      "server": "nodemon server.js"
+    },
+    "author": "AlejandroMar",
+    "license": "MIT",
+    "dependencies": {
+      "concurrently": "^3.5.1",
+      "express": "^4.16.3"
+    },
+    "devDependencies": {
+      "nodemon": "^1.17.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c node server.js --prefix client
+  Directory: /home/flash/development/express-react-boilerplate
+  Output:
+  
+      at ProcessTermError.MessageError (/usr/share/yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/share/yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/share/yarn/lib/cli.js:30281:17)
+      at emitTwo (events.js:125:13)
+      at ChildProcess.emit (events.js:213:7)
+      at maybeClose (internal/child_process.js:927:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
