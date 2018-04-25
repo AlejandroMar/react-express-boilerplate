@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => {
-    const ingredients = {
-       "Carrots": 3,
-       "Rice": "1 Kl",
-       "Milk": "one bottle" 
-    }
+app.get('/api/ingredients', (req, res) => {
+    const ingredients = [
+       {"ingredient": "Carrots", "quantity": 3},
+       {"ingredient": "Rice", "quantity": "1 Kl"},
+       {"ingredient": "Milk", "quantity": "one bottle"} 
+    ]
     res.json(ingredients);
 })
 

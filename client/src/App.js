@@ -3,6 +3,18 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    ingredients: []
+  }
+
+  componentDidMount(){
+    fetch('/api/ingredients')
+      .then(res => res.json())
+      .then(ingredients => this.setState({ingredients}))
+      
+
+  }
   render() {
     return (
       <div className="App">
@@ -10,9 +22,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        {this.state.ingredients.map((ingredient, index) => <li key={index}>{`${ingredient.ingredient} : ${ingredient.quantity}.`} </li>)}
       </div>
     );
   }
