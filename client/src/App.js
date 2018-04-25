@@ -12,8 +12,6 @@ class App extends Component {
     fetch('/api/ingredients')
       .then(res => res.json())
       .then(ingredients => this.setState({ingredients}))
-      
-
   }
   render() {
     return (
