@@ -2,7 +2,12 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('hello')
+    const ingredients = {
+       "Carrots": 3,
+       "Rice": "1 Kl",
+       "Milk": "one bottle" 
+    }
+    res.json(ingredients);
 })
 
 const port = 5000;
